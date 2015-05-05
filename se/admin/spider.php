@@ -1,12 +1,4 @@
 <?php 
-/*******************************************
-* Sphider Version 1.3.*
-* This program is licensed under the GNU GPL.
-* By Ando Saabas		  ando(a t)cs.ioc.ee
-*
-* Thanks to Antoine Bajolet for ideas and
-* several code pieces
-********************************************/
 
 	set_time_limit (0);
 	$include_dir = "../include";
@@ -604,8 +596,8 @@
 		print " -u <url>\t Set url to index\n";
 		print " -f\t\t Set indexing depth to full (unlimited depth)\n";
 		print " -d <num>\t Set indexing depth to <num>\n";
-		print " -l\t\t Allow spider to leave the initial domain\n";
-		print " -r\t\t Set spider to reindex a site\n";
+		print " -l\t\t Allow G-Bot to leave the initial domain\n";
+		print " -r\t\t Set G-Bot to reindex a site\n";
 		print " -m <string>\t Set the string(s) that an url must include (use \\n as a delimiter between multiple strings)\n";
 		print " -n <string>\t Set the string(s) that an url must not include (use \\n as a delimiter between multiple strings)\n";
 	}
@@ -617,7 +609,7 @@
 		if ($log_handle) {
 			$log_report = "Log saved into $log_file";
 		}
-		mail($admin_email, "Sphider indexing report", "Sphider has finished indexing $indexed at ".date("y-m-d H:i:s").". ".$log_report);
+		mail($admin_email, "G-Bot indexing report", "G-Bot has finished indexing $indexed at ".date("y-m-d H:i:s").". ".$log_report);
 	}
 	if ( $log_handle) {
 		fclose($log_handle);

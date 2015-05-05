@@ -1,9 +1,5 @@
 <?php 
-/*******************************************
-* Sphider Version 1.3.*
-* This program is licensed under the GNU GPL.
-* By Ando Saabas          ando(a t)cs.ioc.ee
-********************************************/
+
 
 	$includes = array('./include', 'include', '../include');
 	if( !in_array($include_dir, $includes) )  {

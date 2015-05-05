@@ -1,10 +1,5 @@
 <?php
-/*******************************************
-* Sphider Version 1.3.x
-* This program is licensed under the GNU GPL.
-* By Ando Saabas          ando(a t)cs.ioc.ee
-********************************************/
-//error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING); 
+
 error_reporting(E_ALL); 
 $include_dir = "./include"; 
 include ("$include_dir/commonfuncs.php");
@@ -100,9 +95,8 @@ function getmicrotime(){
 
 
 function poweredby () {
-	global $sph_messages;
-    //If you want to remove this, please donate to the project at http://www.sphider.eu/donate.php
-    print $sph_messages['Powered by'];?>  <a href="http://www.sphider.eu/"><img src="sphider-logo.png" border="0" style="vertical-align: middle" alt="Sphider"></a>
+	 global $sph_messages;
+    print $sph_messages['Powered by'];?>  <a href="http://www.googleswiki.wordpress.com/"><img src="gbot-logo.png" border="0" style="vertical-align: middle" alt="gbot"></a>
 
     <?php 
 }

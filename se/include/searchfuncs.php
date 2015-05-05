@@ -1,9 +1,4 @@
 <?php 
-/*******************************************
-* Sphider Version 1.3.x
-* This program is licensed under the GNU GPL.
-* By Ando Saabas		  ando(a t)cs.ioc.ee
-********************************************/
 
 error_reporting(E_ALL ^ E_NOTICE);
 	

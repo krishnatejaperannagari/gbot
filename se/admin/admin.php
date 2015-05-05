@@ -1,9 +1,5 @@
 <?php 
-/*******************************************
-* Sphider Version 1..3.*
-* This program is licensed under the GNU GPL.
-* By Ando Saabas           ando(a t)cs.ioc.ee
-********************************************/
+
 
 error_reporting (E_ALL ^ E_NOTICE);
 
@@ -22,7 +18,7 @@ set_time_limit (0);
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Sphider administrator tools</title>
+<title>G-Bot administrator tools</title>
 <link rel="stylesheet" href="admin.css" type="text/css" />
 </head>
 <body>
@@ -299,9 +295,9 @@ function addcatform($parent) {
 			<tr><td><b>URL:</b></td><td align ="right"></td><td><input type=text name=url value=<?php print "\"".$row['url']."\""?> size=60></td></tr>
 			<tr><td><b>Title:</b></td><td></td><td> <input type=text name=title value=<?php print  "\"".stripslashes($row['title'])."\""?> size=60></td></tr>
 			<tr><td><b>Short description:</b></td><td></td><td><textarea name=short_desc cols=45 rows=3 wrap><?php print stripslashes($row['short_desc'])?></textarea></td></tr>
-			<tr><td><b>Spidering options:</b></td><td></td><td><input type="radio" name="soption" value="full" <?php print $fullchecked;?>> Full<br/>
+			<tr><td><b>G-Bot options:</b></td><td></td><td><input type="radio" name="soption" value="full" <?php print $fullchecked;?>> Full<br/>
 			<input type="radio" name="soption" value="level" <?php print $depthchecked;?>>To depth: <input type="text" name="depth" size="2" value="<?php print $depth;?>"><br/>
-			<input type="checkbox" name="domaincb" value="1" <?php print $domainchecked;?>> Spider can leave domain
+			<input type="checkbox" name="domaincb" value="1" <?php print $domainchecked;?>> G-Bot can leave domain
 			</td></tr>			
 			<tr><td><b>URLs must include:</b></td><td></td><td><textarea name=in cols=45 rows=2 wrap="virtual"><?php print $row['required'];?></textarea></td></tr>
 			<tr><td><b>URLs must not include:</b></td><td></td><td><textarea name=out cols=45 rows=2 wrap="virtual"><?php print $row['disallowed'];?></textarea></td></tr>
@@ -400,7 +396,7 @@ function addcatform($parent) {
 			print "<div align=\"center\"><table cellspacing =\"0\" cellpadding=\"0\" class=\"darkgrey\"><tr><td><table cellpadding=\"3\" cellspacing=\"1\">
 			<tr class=\"grey\"><td align=\"center\"><b>Site name</b></td><td align=\"center\"><b>Site url</b></td><td align=\"center\"><b>Last indexed</b></td><td colspan=4></td></tr>\n";
 		} else {
-			?><center><p><b>Welcom to Sphider. <br><br>Choose "Add site" from the submenu to add a new site, or "Index" to directly go to the indexing section.</b></p></center><?php 
+			?><center><p><b>Welcome to G-Bot. <br><br>Choose "Add site" from the submenu to add a new site, or "Index" to directly go to the indexing section.</b></p></center><?php 
 		}
 		$class = "grey";
 		while ($row=mysql_fetch_array($result))	{
@@ -721,7 +717,7 @@ function addcatform($parent) {
 		if ($_SESSION['index_advanced']==1){
 			?>
 			<?php if ($canleave==1) {$checkcan="checked" ;} ?>
-			<tr><td></td><td><input type="checkbox" name="domaincb" value="1" <?php print $checkcan;?>> Spider can leave domain <!--a href="javascript:;" onClick="window.open('hmm','newWindow','width=300,height=300,left=600,top=200,resizable');" >?</a--><br/></td></tr>
+			<tr><td></td><td><input type="checkbox" name="domaincb" value="1" <?php print $checkcan;?>> G-Bot can leave domain <!--a href="javascript:;" onClick="window.open('hmm','newWindow','width=300,height=300,left=600,top=200,resizable');" >?</a--><br/></td></tr>
 			<tr><td><b>URL must include:</b></td><td><textarea name=in cols=35 rows=2 wrap="virtual"><?php print $must;?></textarea></td></tr>
 			<tr><td><b>URL must not include:</b></td><td><textarea name=out cols=35 rows=2 wrap="virtual"><?php print $mustnot;?></textarea></td></tr>
 			<?php 
@@ -989,15 +985,7 @@ function addcatform($parent) {
 	function statisticsForm ($type) {
 		global $mysql_table_prefix, $log_dir;
 		?>
-		<div id='submenu'>
-		<ul>
-		<li><a href="admin.php?f=statistics&type=keywords">Top keywords</a></li>
-		<li><a href="admin.php?f=statistics&type=pages">Largest pages</a></li>
-		<li><a href="admin.php?f=statistics&type=top_searches">Most popular searches</a></li>
-		<li><a href="admin.php?f=statistics&type=log">Search log</a></li>
-		<li><a href="admin.php?f=statistics&type=spidering_log">Spidering logs</a></li>
-		</ul>
-		</div>
+
 		
 		<?php 
 			if ($type == "") {

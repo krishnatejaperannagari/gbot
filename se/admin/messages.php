@@ -146,7 +146,7 @@ function printHeader($omit, $url, $cl) {
 		}
 	}
 	
-	$log_msg_txt = "Spidering $url\n";
+	$log_msg_txt = "G-Boting $url\n";
 	if (count($omit) > 0) {
 		$log_msg_txt .= "Disallowed files and directories in robots.txt:\n";
 		$log_msg_txt .= implode("\n", $omits);
@@ -157,7 +157,7 @@ function printHeader($omit, $url, $cl) {
 	$log_msg_html_1 .= "<body style=\"font-family:Verdana, Arial; font-size:12px\">";
 	
 	$log_msg_html_link = "[Back to <a href=\"admin.php\">admin</a>]";
-	$log_msg_html_2 = "<p><font size=\"+1\">Spidering <b>$url</b></font></p>\n";
+	$log_msg_html_2 = "<p><font size=\"+1\">G-Boting <b>$url</b></font></p>\n";
 
 	if (count($omit) > 0) {
 		$log_msg_html_2 .=  "Disallowed files and directories in robots.txt:<br>\n";

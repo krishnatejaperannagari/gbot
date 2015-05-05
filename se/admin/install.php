@@ -1,12 +1,12 @@
 <html>
 	<head>		
 	<title>
-	Sphider installation script.
+	G-Bot installation script.
 	</title>
 	<LINK REL=STYLESHEET HREF="admin.css" TYPE="text/css">
 	</head>
 <body>
-<h2>Sphider installation script.</h2>
+<h2>G-Bot installation script.</h2>
 <?php
 error_reporting(E_ALL);
 $settings_dir = "../settings";

@@ -1,12 +1,4 @@
 <?php 
-/***********************
- Sphider configuration file
-***********************/
-
-
-/*********************** 
-General settings 
-***********************/
 
 // Sphider version 
 $version_nr			= '1.3.5';
@@ -146,7 +138,7 @@ $merge_site_results		= 0;
 // Enable spelling suggestions (Did you mean...)
 $did_you_mean_enabled	= 1;
 
-// Enable Sphider Suggest 
+// Enable G-Bot Suggest 
 $suggest_enabled		= 1;
 
 // Search for suggestions in query log 

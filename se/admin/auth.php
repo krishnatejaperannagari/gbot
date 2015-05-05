@@ -22,7 +22,7 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
 	?>
 	<html>
 	<head>
-	<title>Sphider Admin Login</title>
+	<title>G-Bot Admin Login</title>
 		<LINK REL=STYLESHEET HREF="admin.css" TYPE="text/css">
 	</head>
 
@@ -30,7 +30,7 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
 	<center>
 	<br><br>
 	
-	<fieldset style="width:30%;"><legend><b>Sphider Admin Login</b></legend>
+	<fieldset style="width:30%;"><legend><b>G-Bot Admin Login</b></legend>
 	<form action="auth.php" method="post">
 	
 	<table>
